@@ -1,0 +1,69 @@
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// Required Header files
+//
+///////////////////////////////////////////////////////////////////////////////
+#include<stdio.h>       //for input output
+#include<stdbool.h>     //for bool data type
+
+///////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : CheckEvenOdd
+//  Description :   It is used to check even and odd numbers
+//  Input :         int
+//  Output :        boolean
+//  Author :        Snehal S Shinde 
+//  Date :          10/10/2025
+//
+///////////////////////////////////////////////////////////////////////////////
+
+
+
+bool CheckEvenOdd(int iNo)
+{
+    int iRem = 0;
+    iRem = iNo%2;
+
+    if(iRem == 0)
+    { return true; }
+    else
+    { return false; }
+
+} //  End of the checkEvenOdd function
+
+///////////////////////////////////////////////////////////////////////////////
+//
+//  Entry Point Function for the application.
+//
+///////////////////////////////////////////////////////////////////////////////
+
+
+int main()
+{
+
+    int iValue = 0;
+    bool bRet = false;
+    printf("Enter number:");
+    scanf("%d",&iValue);
+
+    bRet= CheckEvenOdd(iValue);
+    if(bRet==true)
+    { printf(" %d is even number\n",iValue); }
+    else
+    { printf(" %d is even number\n",iValue); }
+
+    return 0;
+}//  End of main
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// Testcases Successful handled by the application
+//  Input1  : 10            Output  : even
+// Input1  : -10           Output  : even
+//  Input2  : 11            Output  : odd
+//  
+//    
+//
+//
+///////////////////////////////////////////////////////////////////////////////
