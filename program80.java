@@ -1,0 +1,64 @@
+import java.util.*;
+
+class Number
+{
+    public boolean DisplayFactors(int iNo)
+    { 
+        int i = 0;
+        int iSum = 0;
+
+        for(i = 1; i <= (iNo/2); i++)
+            {
+                if ((iNo %i)== 0)
+                {
+                 iSum = iSum +i;
+                }
+            }
+        if(iSum == iNo)
+        {
+            return true;
+        }
+        else 
+        {
+            return false;
+        }
+    }    
+
+} // End of Number Class
+
+class program80
+{
+    // method can be written here above main or make seperate class 
+    public static void main(String A[])
+    {
+        int iValue = 0;
+        boolean bRet = false;
+        
+        Scanner sobj = new Scanner(System.in);
+
+        System.out.println("Enter Number:");
+        iValue = sobj.nextInt();
+        
+        
+        Number nobj = new Number();
+        bRet = nobj.CheckPerfect(iValue);
+
+        if(bRet == true)
+        {
+            System.out.println (iValue +" is perfect number");
+        }
+        else
+        {
+            {
+            System.out.println (iValue+" is not a perfect number");
+            }
+        }
+        // important to write,below syntax to call garbage collector for resource deallocation.
+        sobj = null;
+        nobj = null;
+
+        System.gc();
+
+             
+    }
+}
